@@ -1,0 +1,142 @@
+{
+  "version": "1.0",
+  "description": "Benchmark tasks for evaluating the Agentic Web Navigator",
+  "tasks": [
+    {
+      "id": "task_001",
+      "name": "Google Search",
+      "goal": "Go to Google and search for 'artificial intelligence news'",
+      "start_url": "https://www.google.com",
+      "success_criteria": {
+        "type": "url_contains",
+        "value": "search?q="
+      },
+      "difficulty": "easy",
+      "expected_steps": 3,
+      "timeout_seconds": 60
+    },
+    {
+      "id": "task_002",
+      "name": "Wikipedia Article",
+      "goal": "Go to Wikipedia and search for 'Machine Learning', then click on the first result",
+      "start_url": "https://www.wikipedia.org",
+      "success_criteria": {
+        "type": "url_contains",
+        "value": "Machine_learning"
+      },
+      "difficulty": "easy",
+      "expected_steps": 4,
+      "timeout_seconds": 60
+    },
+    {
+      "id": "task_003",
+      "name": "Weather Check",
+      "goal": "Go to weather.com and check the weather for London, UK",
+      "start_url": "https://weather.com",
+      "success_criteria": {
+        "type": "page_contains_text",
+        "value": "London"
+      },
+      "difficulty": "medium",
+      "expected_steps": 5,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "task_004",
+      "name": "GitHub Repository",
+      "goal": "Go to GitHub and search for 'langchain' repository",
+      "start_url": "https://github.com",
+      "success_criteria": {
+        "type": "url_contains",
+        "value": "search?q=langchain"
+      },
+      "difficulty": "easy",
+      "expected_steps": 3,
+      "timeout_seconds": 60
+    },
+    {
+      "id": "task_005",
+      "name": "News Article",
+      "goal": "Go to BBC News and navigate to the Technology section",
+      "start_url": "https://www.bbc.com/news",
+      "success_criteria": {
+        "type": "url_contains",
+        "value": "technology"
+      },
+      "difficulty": "medium",
+      "expected_steps": 4,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "task_006",
+      "name": "Amazon Product Search",
+      "goal": "Go to Amazon and search for '4K monitor'",
+      "start_url": "https://www.amazon.com",
+      "success_criteria": {
+        "type": "url_contains",
+        "value": "k=4K+monitor"
+      },
+      "difficulty": "medium",
+      "expected_steps": 4,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "task_007",
+      "name": "YouTube Search",
+      "goal": "Go to YouTube and search for 'python tutorial'",
+      "start_url": "https://www.youtube.com",
+      "success_criteria": {
+        "type": "url_contains",
+        "value": "search_query=python"
+      },
+      "difficulty": "medium",
+      "expected_steps": 4,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "task_008",
+      "name": "Stack Overflow Question",
+      "goal": "Go to Stack Overflow and search for questions about 'async await python'",
+      "start_url": "https://stackoverflow.com",
+      "success_criteria": {
+        "type": "url_contains",
+        "value": "search?q="
+      },
+      "difficulty": "medium",
+      "expected_steps": 4,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "task_009",
+      "name": "Reddit Subreddit",
+      "goal": "Go to Reddit and navigate to the r/programming subreddit",
+      "start_url": "https://www.reddit.com",
+      "success_criteria": {
+        "type": "url_contains",
+        "value": "r/programming"
+      },
+      "difficulty": "medium",
+      "expected_steps": 4,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "task_010",
+      "name": "eBay Product Search",
+      "goal": "Go to eBay and search for 'iPhone 15'",
+      "start_url": "https://www.ebay.com",
+      "success_criteria": {
+        "type": "url_contains",
+        "value": "_nkw=iPhone"
+      },
+      "difficulty": "medium",
+      "expected_steps": 4,
+      "timeout_seconds": 90
+    }
+  ],
+  "evaluation_config": {
+    "max_retries_per_task": 2,
+    "screenshot_on_failure": true,
+    "log_level": "INFO",
+    "parallel_tasks": false
+  }
+}
